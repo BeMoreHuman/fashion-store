@@ -25,10 +25,10 @@ function animLoader() {
   const tl = new TimelineMax();
 
   tl
-    .to(loaderCube, 1, {ease: Power1.easeIn, rotation: '+= 450', transformOrigin:"center center"})
-    .to(loaderLine, 1, {ease: Power0.easeNone, height: 0}, 0)
-    .to(loader, 1, {opacity: 0}, 1)
-    .to(loader, 1, {zIndex: -1}, 2);
+    .to(loaderCube, 1.5, {ease: Power2.easeInOut, rotation: '+= 450', transformOrigin:"center center"})
+    .to(loaderLine, 1.5, {ease: Power0.easeNone, height: 0}, 0)
+    .to(loader, 1, {opacity: 0}, 1.4)
+    .to(loader, 1, {zIndex: -1}, 3);
 }
 function animSections() {
   const tl = new TimelineMax();
@@ -51,7 +51,7 @@ function animImages() {
 
   Array.prototype.forEach.call(sectionsNode, function (section) {
     const sectionHeight = section.offsetHeight;
-    const animDelay = 0.1 + ((Math.floor(Math.random() * (10 - 4) + 4)) * 0.1);
+    const animDelay = ((Math.floor(Math.random() * (10 - 4) + 4)) * 0.1);
 
     tl
       .to(section, 1, {ease: Power2.easeInOut, top: `-=${sectionHeight}`}, animDelay)
