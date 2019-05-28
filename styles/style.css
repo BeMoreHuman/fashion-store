@@ -16,6 +16,7 @@ body {
 
 #js-btn {
   position: absolute;
+  z-index: 100;
   top: 50px;
   left: 50%;
   transform: translateX(-50%); }
